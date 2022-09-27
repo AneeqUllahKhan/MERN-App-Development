@@ -194,12 +194,142 @@ let a = [
 
 // ===== Find =====
 
-let b = a.find(function(x, i){
-    if(x.id == 2){
-        return x;
-    }
-})
+// let b = a.find(function(x, i){
+//     if(x.id == 2){
+//         return x;
+//     }
+// })
 
-console.log(b)
+// console.log(b)
+
+
+// ===== FindIndex ====
+
+// let i = a.findIndex(function(x){
+//     return x.id == 4 ? x : null;
+// });
+// console.log(i);
 
 // ===== Function =====
+
+// 1 : Arrow Function
+// Dont have own Identity
+// function abc(a){
+//     console.log(a);
+// }
+// abc("Message")
+
+// let abc = a =>{
+//     console.log(a);
+// }
+// abc(a);
+
+
+// let abc = a =>{
+//     return a
+// }
+// console.log(abc("Message"))
+
+// let abc = a => a
+// console.log(abc("Message"))
+
+// let arr = a.filter(x => x.category == "B")
+// console.log(arr)
+
+
+
+
+// 2 : Call Back Function
+ 
+// Perimeter ke andar jo chalraha hai wo call back karaha hai
+// abc call back function
+
+// let abc = (a)=>{
+//  return a 
+
+// }
+
+// let xyz = (a)=>{
+//     return a*2
+// }
+// console.log(xyz(abc(10)))
+
+
+// 3 : High Order Function
+
+// let abc = ()=>{
+//     console.log("abc")
+//     return ()=>{
+//         console.log("xyz")
+//     }
+// }
+
+// let b = abc()
+// b()
+
+// let abc = ()=>{
+//     console.log("abc")
+//     return "xyz"
+// }
+
+// let b = abc()
+// console.log(b)
+
+
+// let mno = ()=> {
+//     console.log("mno")
+// }
+
+let abc = ()=>{
+    console.log("abc")
+    return ()=>{
+        console.log("xyz")
+    }
+}
+
+abc()()
+
+
+
+
+// 4 : Closures Function
+
+
+
+// ===== Arrow Function =====
+// ===== Higher Order Function =====
+// ===== Call Back Function =====
+// ===== De stucturing =====
+// ===== Function =====
+
+
+// Promise
+
+// let checkpassword = (password)=>new Promise ((resolve, reject)=>{
+//     if(password.length >6){
+// resolve ("Password is correct")
+//     }else{
+//         reject("Password is incorrect")
+//     }
+// });
+
+// checkpassword("12345")
+// .then((res)=>{
+//     console.log(res);
+// })
+
+// .catch((err)=>{
+//     console.log(err);
+// })
+
+// Async
+
+let acd =()=>{
+ console.log("1")
+ setTimeout(()=>{
+     console.log("2")
+
+ })
+ console.log("3")
+ console.log("4")
+}
