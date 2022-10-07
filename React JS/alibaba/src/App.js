@@ -399,18 +399,21 @@ function App() {
             </Grid>
           </Grid>
         </Container>
-      </AppBar><br />
+      </AppBar>
+      <br />
 
       <Container sx={{ marginTop: "50px" }}>
         <Grid container>
-          {
-             allCategories.map((e, i)=> (
-               <Grid item key={i} md={2} xs={12} sm={6} >
-                {e}
-
-               </Grid>
-            ))
-          }
+          <Grid
+            item 
+            label="Category"
+            
+          >
+            {allCategories.map((e, i) => (
+              <Chip key={i} value={selectedCategory} label={e} onClick={(e) => searchCategory(e.target.value)}/>
+              
+            ))}
+          </Grid>
         </Grid>
       </Container>
 
