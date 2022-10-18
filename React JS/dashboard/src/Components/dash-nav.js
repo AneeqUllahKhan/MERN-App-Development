@@ -17,7 +17,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import DashboardRouter from '../Config/Dashboard_Router'
 
 
 const drawerWidth = 240;
@@ -29,6 +30,12 @@ function ResponsiveDrawer(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  let navigate = useNavigate();
+  let movenavigate = () => {
+    navigate('/')
+  }
+  
 
   const drawer = (
     <div>
@@ -52,7 +59,7 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider />
       <List>
-        {['Sales'].map((text, index) => (
+        {['Sales','Data'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -130,7 +137,10 @@ function ResponsiveDrawer(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography variant="h6" color="initial">{props.title}</Typography>
+
+
+        
+
       </Box>
     </Box>
   );

@@ -6,6 +6,7 @@ import Dashboard from "../Screens/Dashboard";
 import Services from "../Screens/Services";
 import Home from "../Screens/Home";
 import NotFound from "../Screens/NotFound";
+import CardRender from "../Screens/dashboard_screen/CardRender";
 
 
 export default function ReactRouter() {
@@ -19,6 +20,7 @@ export default function ReactRouter() {
             <Route path="Contact" element={<Contact/>}/>
             <Route path="Services" element={<Services/>}/>
             <Route path="Dashboard/*" element={<Dashboard/>}/>
+            <Route path='CardRender' element={<CardRender/>} />
             <Route path="*" element={<NotFound/>}/>
            
         </Routes>

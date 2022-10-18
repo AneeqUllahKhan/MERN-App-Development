@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-const Inbox = () => {
+const Render = () => {
   return (
     <div>
-      Inbox
+      
     </div>
   )
 }
 
-export default Inbox
+export default Render

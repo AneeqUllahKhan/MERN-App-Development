@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-const Inbox = () => {
+const NotFound = () => {
   return (
     <div>
-      Inbox
+      Not Found
     </div>
   )
 }
 
-export default Inbox
+export default NotFound
